@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="logo">Event Manager</a>
+        <nav class="navbar">
+            <!-- Navigation links will be dynamically updated -->
+        </nav>
+        <div id="menu-bars" class="fas fa-bars"></div>
+    </header>
+
+    <!-- THEME CHANGER -->
+    <div class="theme-changer">
+        <button id="theme-toggle">Toggle Theme</button>
+    </div>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="home">
+        <div class="content">
+            <h1>Discover & Book Amazing Events</h1>
+            <p>Your one-stop platform for managing all your events!</p>
+            <a href="#events" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+
+        <!-- Filter Options -->
+        <div class="filter">
+            <input type="text" id="search" placeholder="Search events..." />
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="theatre">Theatre</option>
+                <option value="conference">Conference</option>
+                <option value="art">Art</option>
+            </select>
+            <input type="date" id="date-filter">
+<button id="clear-filters" class="btn">Clear Filters</button>
+        </div>
+
+        <div class="event-container">
+            <!-- Event 1 -->
+            <div class="event-card" data-category="music" data-date="2024-07-15">
+                <img src="https://picsum.photos/300/200?random=1" alt="Summer Beats Festival">
+                <div class="event-info">
+                    <h3>Summer Beats Festival</h3>
+                    <p class="date">Date: July 15, 2024</p>
+                    <p class="location">Location: Central Park, New York</p>
+                    <p class="category">Category: Music</p>
+                    <p class="description">Join us for the biggest summer music festival featuring top artists.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 2 -->
+            <div class="event-card" data-category="sports" data-date="2024-08-20">
+                <img src="https://picsum.photos/300/200?random=2" alt="City Marathon">
+                <div class="event-info">
+                    <h3>City Marathon 2024</h3>
+                    <p class="date">Date: August 20, 2024</p>
+                    <p class="location">Location: Downtown Los Angeles</p>
+                    <p class="category">Category: Sports</p>
+                    <p class="description">Annual city marathon open to all runners. Register now!</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 3 -->
+            <div class="event-card" data-category="theatre" data-date="2024-09-05">
+                <img src="https://picsum.photos/300/200?random=3" alt="Romeo and Juliet">
+                <div class="event-info">
+                    <h3>Romeo and Juliet</h3>
+                    <p class="date">Date: September 5, 2024</p>
+                    <p class="location">Location: Royal Theatre, London</p>
+                    <p class="category">Category: Theatre</p>
+                    <p class="description">Classic Shakespeare play performed by the Royal Theatre Company.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 4 -->
+            <div class="event-card" data-category="conference" data-date="2024-10-10">
+                <img src="https://picsum.photos/300/200?random=4" alt="Tech Innovators Summit">
+                <div class="event-info">
+                    <h3>Tech Innovators Summit</h3>
+                    <p class="date">Date: October 10, 2024</p>
+                    <p class="location">Location: Silicon Valley Convention Center</p>
+                    <p class="category">Category: Conference</p>
+                    <p class="description">Gathering of tech leaders discussing future innovations.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 5 -->
+            <div class="event-card" data-category="art" data-date="2024-06-25">
+                <img src="https://picsum.photos/300/200?random=5" alt="Modern Art Exhibition">
+                <div class="event-info">
+                    <h3>Modern Art Exhibition</h3>
+                    <p class="date">Date: June 25, 2024</p>
+                    <p class="location">Location: Paris Art Museum</p>
+                    <p class="category">Category: Art</p>
+                    <p class="description">Explore contemporary artworks from renowned artists.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 6 -->
+            <div class="event-card" data-category="music" data-date="2024-07-20">
+                <img src="https://picsum.photos/300/200?random=6" alt="Jazz Night">
+                <div class="event-info">
+                    <h3>Jazz Night Under the Stars</h3>
+                    <p class="date">Date: July 20, 2024</p>
+                    <p class="location">Location: Chicago Jazz Club</p>
+                    <p class="category">Category: Music</p>
+                    <p class="description">Enjoy an evening of live jazz performances.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 7 -->
+            <div class="event-card" data-category="sports" data-date="2024-09-15">
+                <img src="https://picsum.photos/300/200?random=7" alt="Basketball Finals">
+                <div class="event-info">
+                    <h3>National Basketball Finals</h3>
+                    <p class="date">Date: September 15, 2024</p>
+                    <p class="location">Location: Madison Square Garden, NYC</p>
+                    <p class="category">Category: Sports</p>
+                    <p class="description">Watch the top teams compete for the championship.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 8 -->
+            <div class="event-card" data-category="theatre" data-date="2024-08-25">
+                <img src="https://picsum.photos/300/200?random=8" alt="Phantom of the Opera">
+                <div class="event-info">
+                    <h3>The Phantom of the Opera</h3>
+                    <p class="date">Date: August 25, 2024</p>
+                    <p class="location">Location: Sydney Opera House</p>
+                    <p class="category">Category: Theatre</p>
+                    <p class="description">A mesmerizing performance of the classic musical.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 9 -->
+            <div class="event-card" data-category="conference" data-date="2024-11-05">
+                <img src="https://picsum.photos/300/200?random=9" alt="Digital Marketing">
+                <div class="event-info">
+                    <h3>Digital Marketing World</h3>
+                    <p class="date">Date: November 5, 2024</p>
+                    <p class="location">Location: Berlin Expo Center</p>
+                    <p class="category">Category: Conference</p>
+                    <p class="description">Learn the latest trends in digital marketing.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 10 -->
+            <div class="event-card" data-category="art" data-date="2024-07-10">
+                <img src="https://picsum.photos/300/200?random=10" alt="Street Art Festival">
+                <div class="event-info">
+                    <h3>Street Art Festival</h3>
+                    <p class="date">Date: July 10, 2024</p>
+                    <p class="location">Location: Melbourne Laneways</p>
+                    <p class="category">Category: Art</p>
+                    <p class="description">Vibrant street art displays and live painting sessions.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 11 -->
+            <div class="event-card" data-category="music" data-date="2024-12-01">
+                <img src="https://picsum.photos/300/200?random=11" alt="Classical Symphony">
+                <div class="event-info">
+                    <h3>Classical Symphony Orchestra</h3>
+                    <p class="date">Date: December 1, 2024</p>
+                    <p class="location">Location: Vienna Concert Hall</p>
+                    <p class="category">Category: Music</p>
+                    <p class="description">Experience the grandeur of classical music masterpieces.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 12 -->
+            <div class="event-card" data-category="sports" data-date="2024-10-15">
+                <img src="https://picsum.photos/300/200?random=12" alt="Soccer Match">
+                <div class="event-info">
+                    <h3>International Soccer Friendly</h3>
+                    <p class="date">Date: October 15, 2024</p>
+                    <p class="location">Location: Camp Nou, Barcelona</p>
+                    <p class="category">Category: Sports</p>
+                    <p class="description">Exciting friendly match between top international teams.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 13 -->
+            <div class="event-card" data-category="theatre" data-date="2024-09-20">
+                <img src="https://picsum.photos/300/200?random=13" alt="Macbeth">
+                <div class="event-info">
+                    <h3>Macbeth by Globe Theatre</h3>
+                    <p class="date">Date: September 20, 2024</p>
+                    <p class="location">Location: Globe Theatre, London</p>
+                    <p class="category">Category: Theatre</p>
+                    <p class="description">Shakespeare's tragedy brought to life by acclaimed actors.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 14 -->
+            <div class="event-card" data-category="conference" data-date="2024-07-30">
+                <img src="https://picsum.photos/300/200?random=14" alt="Startup Launchpad">
+                <div class="event-info">
+                    <h3>Startup Launchpad</h3>
+                    <p class="date">Date: July 30, 2024</p>
+                    <p class="location">Location: Austin Convention Center</p>
+                    <p class="category">Category: Conference</p>
+                    <p class="description">Connect with startups and investors in this dynamic event.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+    
+            <!-- Event 15 -->
+            <div class="event-card" data-category="art" data-date="2024-08-10">
+                <img src="https://picsum.photos/300/200?random=15" alt="Photography Workshop">
+                <div class="event-info">
+                    <h3>Photography Workshop</h3>
+                    <p class="date">Date: August 10, 2024</p>
+                    <p class="location">Location: Tokyo Art Studio</p>
+                    <p class="category">Category: Art</p>
+                    <p class="description">Hands-on workshop led by professional photographers.</p>
+                    <button class="btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://picsum.photos/300/200?random=1" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=2" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=3" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=4" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=5" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=6" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=7" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=8" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=9" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=10" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=11" alt="Event Image">
+            <img src="https://picsum.photos/300/200?random=12" alt="Event Image">
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Event Manager. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<button id="back-to-top" class="btn">Back to Top</button>
+</body>
+</html>
